@@ -1,5 +1,5 @@
-pip install streamlit
-pip install streamlit-option-menu
+#pip install streamlit
+#pip install streamlit-option-menu
 import streamlit as st
 import sqlite3
 from hashlib import sha256
