@@ -28,10 +28,10 @@ def identify_page():
         vgg_model = VGG16(weights='imagenet', include_top=False)
 
         # Load your trained model
-        model = tf.keras.models.load_model('/content/drive/MyDrive/model.h5', custom_objects={'custom_loss': custom_categorical_crossentropy})
+        model = tf.keras.models.load_model('model.h5', custom_objects={'custom_loss': custom_categorical_crossentropy})
 
-        feat = np.load("/content/drive/MyDrive/features.npy")
-        labels = np.load("/content/drive/MyDrive/labels.npy")
+        feat = np.load("features.npy")
+        labels = np.load("labels.npy")
 
         # Assuming 'labels' is defined and contains the class names
         label_encoder = LabelEncoder()
