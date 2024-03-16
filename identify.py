@@ -10,8 +10,8 @@ from sklearn.preprocessing import LabelEncoder
 import tensorflow as tf
 
 # Define the custom categorical cross-entropy loss function
-def custom_categorical_crossentropy(y_true, y_pred):
-    return tf.keras.losses.categorical_crossentropy(y_true, y_pred, from_logits=False)
+#def custom_categorical_crossentropy(y_true, y_pred):
+    #return tf.keras.losses.categorical_crossentropy(y_true, y_pred, from_logits=False)
 
 # Define the monument identification page
 def identify_page():
@@ -28,7 +28,7 @@ def identify_page():
         vgg_model = VGG16(weights='imagenet', include_top=False)
 
         # Load your trained model
-        model = tf.keras.models.load_model('model.h5', custom_objects={'custom_loss': custom_categorical_crossentropy})
+        model = tf.keras.models.load_model('model.h5')
 
         feat = np.load("features.npy")
         labels = np.load("labels.npy")
